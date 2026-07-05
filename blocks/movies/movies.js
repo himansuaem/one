@@ -24,7 +24,7 @@ async function fetchData(block) {
     card.append(optimized_img)
   }
   
-  block.append(card)
   block.append(movie_name)
+  block.append(card)
  }  
 }
