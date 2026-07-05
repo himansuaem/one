@@ -1,5 +1,6 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 export default async function decorate (block) {
+  block.textContent = ''; // remove leftover authored row/cell divs
    await fetchData(block)
 }
 
