@@ -16,8 +16,7 @@ async function fetchData(block) {
   let movie_thumbnail = document.createElement('img')
   movie_name.textContent = movie_title
   if (movie_img) {
-    let full_movie_img = `https://tmdb.org{movie_img}`
-    let optimized_movie_img = createOptimizedPicture(full_movie_img, movie_title)
+    let full_movie_img = `https://image.tmdb.org/t/p/w500/${movie_img}`
   }
   movie_thumbnail.src = movie_img
   block.append(movie_name)
