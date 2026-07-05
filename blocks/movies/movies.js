@@ -22,9 +22,9 @@ async function fetchData(block) {
     movie_thumbnail.src = full_movie_img
     let optimized_img = createOptimizedPicture(full_movie_img, movie_title)
     card.append(optimized_img)
+    card.append(movie_name)
   }
   
-  block.append(movie_name)
   block.append(card)
  }  
 }
