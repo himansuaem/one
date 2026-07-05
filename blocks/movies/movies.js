@@ -7,7 +7,7 @@ export default async function decorate (block) {
 async function fetchData(block) {
    const params = new URLSearchParams(window.location.search)
    const id = params.get("id") 
- let api_url = await fetch(`https://api.themoviedb.org/3/discover/movie/${id}?api_key=0a5247d162a6d3455cfaff2ae266f450&original_language=hi&region=IN`)
+ let api_url = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=0a5247d162a6d3455cfaff2ae266f450&original_language=hi&region=IN`)
  let movie_url = await api_url.json()
  let result_movie = movie_url.results
  for(let i = 0; i < result_movie.length; i++) {
