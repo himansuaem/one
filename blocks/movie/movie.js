@@ -7,7 +7,7 @@ export default async function decorate (block) {
     block.textContent = "Movie not found"
     return
    }
-   await fetchData(block)
+   await fetchData(id, block)
 }
 
 async function fetchData(id, block) {
