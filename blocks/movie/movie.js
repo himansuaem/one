@@ -26,15 +26,14 @@ async function fetchData(id, block) {
   description.textContent = movie.overview
 
   card.append(title);
-  card.append(description)
 
   if (movie.backdrop_path) {
     const img = createOptimizedPicture(
       `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`,
       movie.title
     );
-
     card.append(img);
+    card.append(description)
   }
 
   block.append(card);
