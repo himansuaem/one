@@ -17,15 +17,26 @@ async function fetchData(block) {
   let movie_thumbnail = document.createElement('img')
   movie_name.textContent = movie_title
   const card = document.createElement('div')
- card.className = "movie-card"
+  card.className = "movie-card"
   if (movie_img) {
     let full_movie_img = `https://image.tmdb.org/t/p/w500${movie_img}`
     movie_thumbnail.src = full_movie_img
     let optimized_img = createOptimizedPicture(full_movie_img, movie_title)
     card.append(optimized_img)
   }
+   /* Create a route for each movie */
+  function createSlug(title) {
+    return title
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+  }
+  let slug = createSlug(movie_title)
+  const link = document.createElement('a')
+  link.href = `/movie/${slug}`
+  link.append(card)
   card.append(movie_name)
-  block.append(card)
+  block.append(link)
  }  
-  
 }
