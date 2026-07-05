@@ -23,9 +23,11 @@ async function fetchData(id, block) {
   const title = document.createElement("h1");
   const description = document.createElement('p')
   title.textContent = movie.title;
+  let page_title = document.title 
   description.textContent = movie.overview
 
   card.append(title);
+  card.append(page_title)
 
   if (movie.backdrop_path) {
     const img = createOptimizedPicture(
