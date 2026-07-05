@@ -34,7 +34,7 @@ async function fetchData(block) {
   }
   let slug = createSlug(movie_title)
   const link = document.createElement('a')
-  link.href = `/movie/${slug}`
+  link.href = `/movie?title=${slug}&id=${movie_id}`;
   link.append(card)
   card.append(movie_name)
   block.append(link)
