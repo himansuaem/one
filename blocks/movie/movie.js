@@ -14,11 +14,9 @@ async function fetchData(id, block) {
  let api_url = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=0a5247d162a6d3455cfaff2ae266f450&original_language=hi&region=IN`)
  let movie_url = await api_url.json()
  let result_movie = movie_url.results
- for(let i = 0; i < result_movie.length; i++) {
-  let movie_item = result_movie[i]
-  let movie_id = movie_item.id 
-  let movie_title = movie_item.title
-  let movie_img = movie_item.backdrop_path
+  let movie_id = result_movie.id 
+  let movie_title = result_movie.title
+  let movie_img = result_movie.backdrop_path
   let movie_name = document.createElement('h2')
   let movie_thumbnail = document.createElement('img')
   movie_name.textContent = movie_title
@@ -31,6 +29,6 @@ async function fetchData(id, block) {
     card.append(optimized_img)
   }
   block.append(movie_name)
- }  
+   
 }
 
