@@ -17,8 +17,8 @@ async function fetchData(block) {
   movie_name.textContent = movie_title
   if (movie_img) {
     let full_movie_img = `https://image.tmdb.org/t/p/w500${movie_img}`
+      movie_thumbnail.src = movie_img
   }
-  movie_thumbnail.src = movie_img
   block.append(movie_name)
   block.append(movie_thumbnail)
  }  
