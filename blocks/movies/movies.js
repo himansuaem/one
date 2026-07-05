@@ -3,10 +3,6 @@ export default async function decorate (block) {
   block.textContent = ''; // remove leftover authored row/cell divs
    const params = new URLSearchParams(window.location.search)
    const id = params.get("id") 
-   if(!id) {
-    block.textContent = "Movie not found"
-    return
-   }
    await fetchData(block)
 }
 
