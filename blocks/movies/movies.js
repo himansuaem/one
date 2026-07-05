@@ -11,8 +11,12 @@ async function fetchData(block) {
   let movie_item = result_movie[i]
   let movie_id = movie_item.id 
   let movie_title = movie_item.title
+  let movie_img = movie_item.backdrop_path
   let movie_name = document.createElement('p')
+  let movie_thumbnail = document.createElement('img')
   movie_name.textContent = movie_title
+  movie_img.src = movie_thumbnail
   block.append(movie_name)
+  block.append(movie_thumbnail)
  }  
 }
