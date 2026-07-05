@@ -17,10 +17,13 @@ async function fetchData(id, block) {
 
   const movie = await response.json();
 
+  const card = document.createElement("div");
+  card.className = "movie-card";
+
   const title = document.createElement("h1");
   title.textContent = movie.title;
 
-  block.append(title);
+  card.append(title);
 
   if (movie.backdrop_path) {
     const img = createOptimizedPicture(
@@ -28,7 +31,9 @@ async function fetchData(id, block) {
       movie.title
     );
 
-    block.append(img);
+    card.append(img);
   }
+
+  block.append(card);
 }
 
