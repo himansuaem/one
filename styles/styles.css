@@ -86,6 +86,8 @@ body.appear {
 
 header {
   height: var(--nav-height);
+  margin-bottom: 1em;
+  padding: 1em;
 }
 
 header .header,

@@ -86,7 +86,6 @@ header nav .nav-hamburger-icon::after {
   display: block;
   position: relative;
   width: 20px;
-  margin-bottom: 1em;
 }
 
 header nav .nav-hamburger-icon::before,
