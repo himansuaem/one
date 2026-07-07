@@ -4,6 +4,7 @@
   grid-template-columns: auto 1fr;
   gap: 1ch;
   align-items: center;
+  margin-top: 1em;
 }
 
 .search .search-box input {
