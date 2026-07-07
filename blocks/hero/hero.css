@@ -14,6 +14,11 @@
   margin-left: auto;
   margin-right: auto;
   color: var(--background-color);
+  text-align: center;
+}
+.hero h2{
+    text-align: center;
+    color: var(--background-color);
 }
 
 .hero picture {
