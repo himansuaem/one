@@ -16,7 +16,7 @@
   color: var(--background-color);
   text-align: center;
 }
-.hero h2{
+.hero h3{
     text-align: center;
     color: var(--background-color);
 }
